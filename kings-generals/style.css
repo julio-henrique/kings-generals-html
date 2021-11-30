@@ -1,0 +1,149 @@
+@import "https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap";
+
+:root {
+    --color-red: #c12224;
+    --color-undefined: #6b4939;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    background: #95765d;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+header {
+    padding: 30px;
+    border-bottom: 1px solid #333;
+    background: hsl(27, 23%, 35%);
+}
+
+.links {
+    text-align: center;
+    
+}
+
+.links a {
+    color: white;
+    font-size: 18px;
+    line-height: 22px;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.links a:hover {
+    color: var(--color-red);
+    transition: color 200ms;
+}
+
+#wrapper {
+    text-align: center;
+    padding: 32px;
+}
+
+#wrapper img {
+    border-radius: 50%;
+    border: 5px solid var(--color-red);
+    margin-bottom: 20px;
+    height: 220px;
+    width: 240px;
+}
+
+#wrapper h1 {
+    font-size: 32px;
+    line-height: 42px;
+    font-weight: bold;
+}
+
+#wrapper h2 {
+    font-size: 22px;
+    line-height: 24px;
+    font-weight: normal;
+    margin-top: 8px;
+    opacity: 0.8;
+}
+
+#wrapper p {
+    max-width: 500px;
+    margin: 32px auto;
+    font-size: 19px;
+    line-height: 22px;
+}
+
+.links-footer a {
+    border-bottom: 2.5px solid var(--color-red);
+    
+}
+
+/* === CARDS === */
+.cards {
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.card {
+    background-color: var(--color-undefined);
+}
+
+.card_image_container img {
+    width: 100%;
+}
+
+.card_content,
+.card_info {
+    padding: 24px;
+}
+
+.card_info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.card_category {
+    background-color: var(--color-undefined);
+    filter: brightness(90%);
+    padding: 5px 20px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+
+/* === MODAL === */
+.modal-overlay {
+    background: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal {
+    background-color: white;
+    width: 90%;
+    height: 90%;
+    margin: 5vh auto;
+    position: relative;
+}
+
+.modal .close-modal {
+    color: black;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
